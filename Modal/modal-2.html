@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal 2</title>
+    <style>
+        /*El truco es hacer que este div cubra completamente la ventana. 
+            Para eso haremos lo siguiente.*/
+        #modal {
+            background: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            transition: all .5s;
+        }
+
+        /*Posteriormente centraremos el párrafo absolutamente
+        (vertical y horizontal) respecto al modal.*/
+
+        #modal p {
+            width: 60%;
+            height: 40%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        /* Y eso es todo. Finalmente cambiaremos el valor
+           de la propiedad top del modal de 0 a –100vh para
+           que se oculte ubicándose offcanvas (fuera del viewport)
+           por la parte superior. Le añadiremos también una
+           transición para que cuando se muestre use una animación.*/
+        #modal {
+            background: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            position: fixed;
+            top: -100vh;
+            left: 0;
+            transition: all .5s;
+        }
+
+        /*Ocultamos el input y le hacemos que la
+        etiqueta se vea como un botón. Usamos el conector + para seleccionar el label inmediatamente posterior al input.*/
+        #mostrar-modal {
+            display: none;
+        }
+
+        #mostrar-modal+label {
+            background: steelblue;
+            display: table;
+            margin: auto;
+            color: #fff;
+            line-height: 3;
+            padding: 0 1em;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        #mostrar-modal+label:hover {
+            background: #38678f;
+        }
+
+        /*Finalmente, usando el conector ~ y la seudoclase :checked buscamos el modal que se encuentre posteriormente en el html. La seudoclase :checked se activa al hacer clic en un input (radio o checkbox).*/
+        #mostrar-modal:checked~#modal {
+            top: 0;
+        }
+
+        /*Le daremos un estilo circular, posición fija arriba a la derecha y un z-index superior al modal para que siempre aparezca por encima.*/
+        #cerrar-modal {
+            display: none;
+        }
+
+        #cerrar-modal+label {
+            position: absolute;
+            top: 1em;
+            right: 1em;
+            z-index: 100;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            background: tomato;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            border-radius: 50%;
+            transition: all .5s;
+        }
+
+        /*Teniendo en cuenta que, como en el caso anterior, este botón debe aparecer antes que la ventana modal en el html, usamos nuevamente el conector ~ para que el modal se oculte al tener el botón con el estado :checked.*/
+        #cerrar-modal:checked~#modal {
+            top: -100vh;
+        }
+
+        /*Ahora todo funciona bien, pero tenemos un pequeño problema.
+                 El botón para cerrar el modal está visible siempre. Y deberia verse solamente cuando se muestra el modal y ocultarse en cualquier otro caso. Para conseguirlo haremos lo siguiente*/
+        #cerrar-modal+label {
+            display: none;
+        }
+
+        #mostrar-modal:checked~#cerrar-modal+label {
+            display: block;
+        }
+
+        #cerrar-modal:checked+label {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Como dijimos anteriormente, usaremos un input del tipo radio.
+    Algo muy importante es que el botón aparezca antes que el modal en
+     el html, puesto que en css no existe forma de seleccionar elementos
+      hacia atrás (previos), solo hacia adelante (siguientes).
+      Además crearemos una etiqueta para el input
+      (cuyo atributo for debe ser igual al id del input).
+       Como en el caso anterior, la etiqueta debe aparecer después del input para poder seleccionarla con css.-->
+    <input id="mostrar-modal" name="modal" type="radio" />
+    <label for="mostrar-modal"> Ver modal </label>
+
+    <!--Creamos el botón para cerrar el modal
+        Usaremos el mismo principio que el botón anterior, solo que en este caso el label tendrá solo la letra X para indicar que es un botón de cerrar (puedes conseguir un mejor resultado con icon fonts). Ten en cuenta que para que solo un input radio sea seleccionado a la vez, estos deben compartir el mismo atributo name.-->
+    <input id="cerrar-modal" name="modal" type="radio" />
+    <label for="cerrar-modal"> X </label>
+
+    <div id="modal">
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum nihil id commodi ipsa vitae dolore
+            molestiae minus enim. Nulla ut recusandae nemo quam autem minus totam impedit, quod accusamus optio?</p>
+    </div>
+</body>
+
+</html>

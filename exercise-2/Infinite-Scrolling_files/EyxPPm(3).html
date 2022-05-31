@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!-- saved from url=(0156)https://codepen.io/chriscoyier/embed/EyxPPm?height=291&theme-id=1&slug-hash=EyxPPm&default-tab=css%2Cresult&user=chriscoyier&embed-version=2&name=cp_embed_2 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Infinite Slideshow</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="2xr3Nq1lKAL9R2EIWuDusUb+Jbjuc8MXqWnIuHMHQci2xQKZ5Qa0HgeEzUqrwaPK/RP2zAfarSqXieP4lg8Arw==">
+<link rel="stylesheet" media="all" href="./embed-319b7d882d8d1632e9fee3147f6a80fec2727c17c7006c0796a8f41b076aa69b.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    .embed-footer,
+    .embed-nav {
+      background: #28282a;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #424242;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #212121;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #ff8a00;
+    }
+    .embed-nav .logo-wrap a {
+      color: #a9a9a9;
+    }
+
+    .embed-nav svg {
+      stroke: #a9a9a9 !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="./highcontrast-dark-a9166d9422d2610b098ad9e69a49ae54f2cdd1fcb34e2c4613bf6d6bbe4bbd79.css">
+<link rel="stylesheet" href="./maVRwd.css">
+</head>
+<body id="the-body" style="border: 1px solid #39231b; --borderWidth: 1px;" class="codepen-embed-body split-output static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="https://codepen.io/chriscoyier/embed/EyxPPm?height=291&amp;theme-id=1&amp;slug-hash=EyxPPm&amp;default-tab=css%2Cresult&amp;user=chriscoyier&amp;embed-version=2&amp;name=cp_embed_2#html-box" aria-pressed="false" role="button">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/chriscoyier/embed/EyxPPm?height=291&amp;theme-id=1&amp;slug-hash=EyxPPm&amp;default-tab=css%2Cresult&amp;user=chriscoyier&amp;embed-version=2&amp;name=cp_embed_2#css-box" class="active" aria-pressed="true" role="button">
+CSS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/chriscoyier/embed/EyxPPm?height=291&amp;theme-id=1&amp;slug-hash=EyxPPm&amp;default-tab=css%2Cresult&amp;user=chriscoyier&amp;embed-version=2&amp;name=cp_embed_2#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="large-logo edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/chriscoyier/pen/EyxPPm" title="Edit on CodePen">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"></path>
+</svg>
+</a>
+<a class="box-logo edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/chriscoyier/pen/EyxPPm" title="Edit on CodePen">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24"></path>
+</svg>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"tech-slideshow"</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"mover-1"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"mover-2"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box active" role="region" aria-label="CSS">
+<pre><code data-lang="css" id="actual-css-code" class=" cm-s-default"><span class="cm-qualifier">.tech-slideshow</span> {
+  <span class="cm-property">height</span>: <span class="cm-number">200px</span>;
+  <span class="cm-property">max-width</span>: <span class="cm-number">800px</span>;
+  <span class="cm-property">margin</span>: <span class="cm-number">0</span> <span class="cm-atom">auto</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+  <span class="cm-property">overflow</span>: <span class="cm-atom">hidden</span>;
+  <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translate3d</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>);
+}
+
+<span class="cm-qualifier">.tech-slideshow</span> &gt; <span class="cm-tag">div</span> {
+  <span class="cm-property">height</span>: <span class="cm-number">200px</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">2526px</span>;
+  <span class="cm-property">background</span>: <span class="cm-variable cm-callee">url</span>(<span class="cm-string">https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/collage.jpg</span>);
+  <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+  <span class="cm-property">top</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">left</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translate3d</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>);
+}
+<span class="cm-qualifier">.tech-slideshow</span> <span class="cm-qualifier">.mover-1</span> {
+  <span class="cm-property">animation</span>: <span class="cm-variable">moveSlideshow</span> <span class="cm-number">12s</span> <span class="cm-atom">linear</span> <span class="cm-atom">infinite</span>;
+}
+<span class="cm-qualifier">.tech-slideshow</span> <span class="cm-qualifier">.mover-2</span> {
+  <span class="cm-property">opacity</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">transition</span>: <span class="cm-atom">opacity</span> <span class="cm-number">0.5s</span> <span class="cm-atom">ease-out</span>;
+  <span class="cm-property">background-position</span>: <span class="cm-number">0</span> <span class="cm-number">-200px</span>;
+  <span class="cm-property">animation</span>: <span class="cm-variable">moveSlideshow</span> <span class="cm-number">15s</span> <span class="cm-atom">linear</span> <span class="cm-atom">infinite</span>;
+}
+<span class="cm-qualifier">.tech-slideshow</span>:<span class="cm-variable-3">hover</span> <span class="cm-qualifier">.mover-2</span> {
+  <span class="cm-property">opacity</span>: <span class="cm-number">1</span>;
+}
+
+<span class="cm-def">@keyframes</span> <span class="cm-variable">moveSlideshow</span> {
+  <span class="cm-number">100%</span> { 
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateX</span>(<span class="cm-number">-66.6666%</span>);  
+  }
+}</code></pre>
+</div>
+<div id="result-box" class="code-box active" role="region" aria-label="Result">
+<iframe id="result-iframe" class="result-iframe " sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr" tabindex="-1" data-src="https://cdpn.io/chriscoyier/fullembedgrid/EyxPPm?type=embed&amp;animations=run" src="./EyxPPm(1).html" allowtransparency="true" frameborder="0" scrolling="yes" allowpaymentrequest="true" allowfullscreen="true" name="CodePen Preview for Infinite Slideshow" title="CodePen Preview for Infinite Slideshow">
+      </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/chriscoyier" target="_blank" rel="noopener" class="about-image" style="background-image: url(https://assets.codepen.io/3/internal/avatars/users/default.png?format=auto&amp;height=512&amp;version=48&amp;width=512)"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/chriscoyier" target="_blank" rel="noopener">Chris Coyier </a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/chriscoyier" target="_blank" rel="noopener" class="about-user-more">
+See more by @chriscoyier on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+<h3>Packages</h3>
+<p>
+This Pen doesn't use any packages.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button active" id="zoom-button-1">1×</button></li><li><button class="action-button" id="zoom-button-05">0.5×</button></li><li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script>
+    __editor_config = {"id":"classic","editors":[{"id":"html","type":"html","name":"HTML","showEditor":true,"showSettings":true,"showProcessors":true,"embeds":{"showViewCompiled":true},"settings":[{"id":"processor","name":"HTML Preprocessor","type":"select","visible":true,"values":[{"id":"none","name":"None","value":"none","default":true},{"id":"haml","name":"Haml","value":"haml"},{"id":"markdown","name":"Markdown","value":"markdown"},{"id":"slim","name":"Slim","value":"slim"},{"id":"pug","name":"Pug","value":"pug"}]},{"id":"html_classes","name":"Add Class(es) to \u003chtml\u003e","type":"input","placeholder":"e.g. single post post-1234","visible":true},{"id":"head","name":"Stuff for \u003chead\u003e","type":"textarea","placeholder":"e.g. \u003cmeta\u003e, \u003clink\u003e, \u003cscript\u003e","visible":true}],"actions":[{"id":"tidy_html","type":"tidy_code","name":"Format HTML","disabled_processors":["haml","slim"]},{"id":"view_compiled_html","type":"view_compiled","name":"View Compiled HTML","disabled_processors":["none"],"showInEmbeds":true},{"id":"analyze_html","type":"analyze","name":"Analyze HTML"},{"id":"maximize_html_editor","type":"maximize","name":"Maximize HTML Editor"},{"id":"minimize_html_editor","type":"minimize","name":"Minimize HTML Editor"},{"id":"fold_all_html","type":"fold_all","name":"Fold All"},{"id":"unfold_all_html","type":"unfold_all","name":"Unfold All"}],"processors":[{"id":"none","name":"None"},{"id":"haml","name":"Haml"},{"id":"markdown","name":"Markdown"},{"id":"slim","name":"Slim"},{"id":"pug","name":"Pug"}]},{"id":"css","type":"css","name":"CSS","showEditor":true,"showSettings":true,"showProcessors":true,"showVendorPrefixing":true,"embeds":{"showViewCompiled":true},"actions":[{"id":"tidy_css","type":"tidy_code","name":"Format CSS","disabled_processors":["sass","stylus"]},{"id":"view_compiled_css","type":"view_compiled","name":"View Compiled CSS","disabled_processors":["none"],"disabled_prefixes":["neither","prefixfree"]},{"id":"analyze_css","type":"analyze","name":"Analyze CSS"},{"id":"maximize_css_editor","type":"maximize","name":"Maximize CSS Editor"},{"id":"minimize_css_editor","type":"minimize","name":"Minimize CSS Editor"},{"id":"fold_all_css","type":"fold_all","name":"Fold All","disabled_processors":["sass"]},{"id":"unfold_all_css","type":"unfold_all","name":"Unfold All","disabled_processors":["sass"]}],"processors":[{"id":"none","name":"None"},{"id":"less","name":"Less"},{"id":"scss","name":"SCSS"},{"id":"sass","name":"Sass"},{"id":"stylus","name":"Stylus"},{"id":"postcss","name":"PostCSS"}],"parSuffixes":["less","scss","sass","styl"]},{"id":"js","type":"js","name":"JS","showEditor":true,"showSettings":true,"showProcessors":true,"externalResourcesHidden":false,"embeds":{"showViewCompiled":true},"actions":[{"id":"tidy_js","type":"tidy_code","name":"Format JavaScript","disabled_processors":["coffeescript, livescript"]},{"id":"view_compiled_js","type":"view_compiled","name":"View Compiled JavaScript","disabled_processors":["none"]},{"id":"analyze_js","type":"analyze","name":"Analyze JavaScript"},{"id":"maximize_js_editor","type":"maximize","name":"Maximize JavaScript Editor"},{"id":"minimize_js_editor","type":"minimize","name":"Minimize JavaScript Editor"},{"id":"fold_all_js","type":"fold_all","name":"Fold All"},{"id":"unfold_all_js","type":"unfold_all","name":"Unfold All"}],"processors":[{"id":"none","name":"None"},{"id":"babel","name":"Babel"},{"id":"typescript","name":"TypeScript"},{"id":"coffeescript","name":"CoffeeScript"},{"id":"livescript","name":"LiveScript"}]}],"formatters":[{"id":"classic","name":"Classic","runOn":[{"eventType":"demand"}],"url":"https://fi593g2v2a.execute-api.us-west-2.amazonaws.com/production/format"}],"layout":{"default":"top"},"linters":[{"id":"classic","name":"Classic","runOn":[{"eventType":"demand"}],"url":"https://fi593g2v2a.execute-api.us-west-2.amazonaws.com/production/lint"}],"preview":{"intervalMaxWaitMS":3500,"intervalMS":1200},"settings":[{"id":"packages","name":"Packages","type":"setting-editor"},{"id":"details","name":"Pen Details","type":"setting"},{"id":"privacy","name":"Privacy","pro":true,"type":"setting"},{"id":"behavior","name":"Behavior","type":"setting"},{"id":"editor","name":"Editor","type":"setting"},{"id":"template","name":"Template","type":"setting"},{"id":"screenshot","name":"Screenshot","pro":true,"type":"setting"}]}
+    __processedPen = {"html":"&lt;div class=&quot;tech-slideshow&quot;&gt;\n  &lt;div class=&quot;mover-1&quot;&gt;&lt;/div&gt;\n  &lt;div class=&quot;mover-2&quot;&gt;&lt;/div&gt;\n&lt;/div&gt;","css":".tech-slideshow {\n  height: 200px;\n  max-width: 800px;\n  margin: 0 auto;\n  position: relative;\n  overflow: hidden;\n  -webkit-transform: translate3d(0, 0, 0);\n          transform: translate3d(0, 0, 0);\n}\n\n.tech-slideshow &gt; div {\n  height: 200px;\n  width: 2526px;\n  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/collage.jpg);\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  -webkit-transform: translate3d(0, 0, 0);\n          transform: translate3d(0, 0, 0);\n}\n.tech-slideshow .mover-1 {\n  -webkit-animation: moveSlideshow 12s linear infinite;\n          animation: moveSlideshow 12s linear infinite;\n}\n.tech-slideshow .mover-2 {\n  opacity: 0;\n  -webkit-transition: opacity 0.5s ease-out;\n  transition: opacity 0.5s ease-out;\n  background-position: 0 -200px;\n  -webkit-animation: moveSlideshow 15s linear infinite;\n          animation: moveSlideshow 15s linear infinite;\n}\n.tech-slideshow:hover .mover-2 {\n  opacity: 1;\n}\n\n@-webkit-keyframes moveSlideshow {\n  100% { \n    -webkit-transform: translateX(-66.6666%); \n            transform: translateX(-66.6666%);  \n  }\n}\n\n@keyframes moveSlideshow {\n  100% { \n    -webkit-transform: translateX(-66.6666%); \n            transform: translateX(-66.6666%);  \n  }\n}","js":""};
+    __preprocessors = {
+      "html": "none",
+      "css": "none",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "CSS",
+      "js": "JS"
+    };
+    __pageType = "embed";
+    __editable = false;
+    __embed_prefill = false;
+    __env = "production";
+  </script>
+<script src="./embed-b94531cb0389104a1448828f722186f0928ce304499c3a13e1acf68d81a3fbc1.js.descarga"></script>
+
+
+</body></html>

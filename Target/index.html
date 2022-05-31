@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from css-tricks.com/examples/Target/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Jun 2020 02:23:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset='UTF-8'>
+<title>Fighting Page Jump</title>
+<link rel='stylesheet' href='css/style.css'>
+<style>
+    :target {
+      -webkit-animation: highlight 1s ease;
+      -moz-animation: highlight 1s ease;
+      -webkit-transform: translateX(20px);
+      -moz-transform: translateX(20px);
+      -ms-transform: translateX(20px);
+      -o-transform: translateX(20px);
+    }
+    @-webkit-keyframes highlight {
+      0% { border-left-color: red; }
+      100% { border-left-color: white; }
+    }
+    @-moz-keyframes highlight {
+      0% { border-left-color: red; }
+      100% { border-left-color: white; }
+    }
+    section > div {
+      border-left: 40px solid white;
+      padding: 10px;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      padding-right: 50px;
+      margin-left: -20px;
+    }
+	</style>
+<script src="../../../ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="c7a49930d8b04911430ad10d-text/javascript"></script>
+<script type="c7a49930d8b04911430ad10d-text/javascript">
+		// $(function() {
+		// 	$("a[href^=#]").on("click", function(e) {
+		// 		e.preventDefault();
+		// 		history.pushState({}, "", this.href);
+		// 	});
+		// });
+	</script>
+</head>
+<body>
+<div id="demo-top-bar">
+<div id="demo-bar-inside">
+<h2 id="demo-bar-badge">
+<a href="https://css-tricks.com/">CSS-Tricks Example</a>
+</h2>
+<div id="demo-bar-buttons">
+</div>
+</div>
+</div>
+<div class="page-wrap">
+<nav>
+<a href="#one">1</a>
+<a href="#two">2</a>
+<a href="#three">3</a>
+</nav>
+<section>
+<div id="one"><h2>One</h2>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</div>
+<div id="two"><h2>Two</h2>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</div>
+<div id="three"><h2>Three</h2>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</div>
+</section>​
+</div>
+<style type="text/css" style="display: none !important;">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		overflow-x: hidden;
+	}
+	#demo-top-bar {
+		text-align: left;
+		background: #222;
+		position: relative;
+		zoom: 1;
+		width: 100% !important;
+		z-index: 6000;
+		padding: 20px 0 20px;
+	}
+	#demo-bar-inside {
+		width: 960px;
+		margin: 0 auto;
+		position: relative;
+		overflow: hidden;
+	}
+	#demo-bar-buttons {
+		padding-top: 10px;
+		float: right;
+	}
+	#demo-bar-buttons a {
+		font-size: 12px;
+		margin-left: 20px;
+		color: white;
+		margin: 2px 0;
+		text-decoration: none;
+		font: 14px "Lucida Grande", Sans-Serif !important;
+	}
+	#demo-bar-buttons a:hover,
+	#demo-bar-buttons a:focus {
+		text-decoration: underline;
+	}
+	#demo-bar-badge {
+		display: inline-block;
+		width: 302px;
+		padding: 0 !important;
+		margin: 0 !important;
+		background-color: transparent !important;
+	}
+	#demo-bar-badge a {
+		display: block;
+		width: 100%;
+		height: 38px;
+		border-radius: 0;
+		bottom: auto;
+		margin: 0;
+		background: url(../../images/examples-logo.png) no-repeat;
+		background-size: 100%;
+		overflow: hidden;
+		text-indent: -9999px;
+	}
+	#demo-bar-badge:before, #demo-bar-badge:after {
+		display: none !important;
+	}
+</style>
+<script src="../../../ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="c7a49930d8b04911430ad10d-|49" defer=""></script></body>
+
+<!-- Mirrored from css-tricks.com/examples/Target/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Jun 2020 02:23:26 GMT -->
+</html>

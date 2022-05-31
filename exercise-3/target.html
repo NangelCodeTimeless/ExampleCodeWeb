@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from webdesignernotebook.com/examples/target.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Jun 2020 00:54:57 GMT -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>:target | Web Designer Notebook</title>
+	
+	<style type="text/css">
+	
+		/* Define the steps, or keyframes, of the animation */
+		@-webkit-keyframes target {
+			from { background:#ffffff; }
+			50% { background:#ffffd3; }
+			to { background:#ffffff; }
+		}
+		
+		/* Give the page some basic styles */
+		body {
+			font:62.5%/1.5 Cambria,Georgia,"Times New Roman",Times,serif;
+			}
+			div, ul, li, a, p {
+				padding:0; margin:0;
+				}
+				
+			/* Style the container */
+			#content {
+				width:500px;
+				margin:auto;
+				font-size:1.4em;
+				}
+				
+				/* Style the list and blocks of text */
+				ul, div > div {
+					margin-bottom:1em;
+					}
+				li {
+					list-style:none;
+					}
+				div > div {
+					padding:1em;
+					border:1px solid #e1d8c4;
+					}
+				div > div:target {
+					border:1px solid #9f8b5e;		
+					-webkit-animation:target .5s linear;
+					/*-webkit-animation-name:target;
+					-webkit-animation-duration:.5s;
+					-webkit-animation-iteration-count:1;
+					-webkit-animation-direction:linear;*/
+					}
+					div > div p:first-line {
+						font-variant:small-caps;
+						font-size:1.2em;
+						}
+			
+	</style>
+
+</head>
+
+<body>
+
+	<div id="content">
+
+		<ul>
+			<li><a href="#b1">Block 1</a></li>
+			<li><a href="#b2">Block 2</a></li>
+			<li><a href="#b3">Block 3</a></li>
+			<li><a href="#b4">Block 4</a></li>
+		</ul>
+		
+		<div id="b1">
+			<p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought.</p>
+		</div>
+		
+		<div id="b2">
+			<p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl quack.</p>
+		</div>
+		
+		<div id="b3">
+			<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+		</div>
+		
+		<div id="b4">
+			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+		</div>
+		
+		<p>Go to the article: <a href="http://webdesignernotebook.com/css/the-css3-target-pseudo-class-and-css-animations">The CSS3 :target Pseudo-class And CSS Animations</a>, on <a href="http://webdesignernotebook.com/">Web Designer Notebook</a></p>
+	
+	</div>
+
+</body>
+
+<!-- Mirrored from webdesignernotebook.com/examples/target.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Jun 2020 00:54:57 GMT -->
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+
+</head>
+<body>
+<style>
+    /*font-size: 16px*/
+    *{margin:0; padding: 0; box-sizing: border-box;}
+
+    .modal{
+        position:fixed;
+        top:0;
+        bottom:0;
+        right:0;
+        left:0;
+        background-color: rgba(3,3,3,.7);
+        opacity:0;
+        pointer-events: none;
+    }
+
+    .modal:target{
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .button{
+        display: inline-block;
+        border: 5px solid;
+        padding: 5px;
+        color:white;
+        background-color:#38678f;
+        text-decoration: none;
+    }
+
+    .box-content{
+        width:14rem;
+        height:14rem;
+        background-color: #38678f;
+        margin-left: 100px;
+        margin-top: 100px;
+    }
+
+    .message{color:white;}
+</style>
+
+<a class="button" href="#msg">Haz click</a>
+
+<div class="modal" id="msg">
+    <div class="box-content">
+        <p class="message">Su producto fue borrado exitosamente.</p>
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>

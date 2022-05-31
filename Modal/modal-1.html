@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <style>
+        /*
+        Primero, crearemos el enlace que activará; 
+        nuestro modal, para esto en el atributo “href” 
+        colocaremos el ID del elemento DIV que contendrá 
+        nuestra ventana modal. 
+
+        En segundo paso, llenamos el contenido de nuestro
+        modal y le asignamos algunos estilos. Nuestro 
+        elemento DIV de clase “modal-contenido” contendrá 
+        el diseño y mensaje del modal que deseamos mostrar
+        y nuestro elemento DIV de clase “modal” contendrá 
+        el fondo que abarcará toda la pantalla y opacará el
+        contenido inicial.
+
+        Como tercer paso, agregaremos la propiedad opacity 
+        con valor 0 a nuestro elemento DIV de clase “modal”
+        para hacerlo transparente, esto aún no es suficiente
+        dado que no nos permite clicar elementos debajo de él.
+        Para solucionar esto, le agregaremos la propiedad 
+        pointer-events con el valor “none” y por fin podremos
+        dar click en nuestro enlace “Abrir Modal”.
+
+        Como cuarto paso, crearemos la funcionalidad que activará 
+        nuestra ventana modal, utilizando la pseudo-clase target
+        en la clase “modal”, con las propiedades opacity igual a 
+        1 y pointer-events igual a auto, esto hará que al momento
+        de dar click en el enlace “Abrir Modal” nuestro modal
+        deje de ser transparente y se muestre totalmente, 
+        así mismo, al cambiar el valor pointer-events de none
+        a auto podremos ahora dar click dentro de él.
+
+        quinto paso, damos click en “Abrir Modal” y veremos que se
+        muestra el modal correctamente. Luego, al dar click en la
+        letra “X” desaparece debido a que el enlace de de esta
+        letra referencia a “#”, en este caso las propiedades 
+        de la pseudoclase creadas no afectarán el modal dado 
+        que solo se activará cuando se referencia al elemento
+        con ID “miModal”.
+
+        Finalmente, la propiedad transition para darle una aparición 
+        y desvanecimiento suavizado y no tan brusco.
+        */
+        .modal-contenido {
+            background-color: aqua;
+            width: 300px;
+            height: 300px;
+            padding: 10px 20px;
+            margin: 20% auto;
+            position: relative;
+        }
+
+        .modal {
+            background-color: rgba(0, 0, 0, .8);
+            position: fixed;
+            top: 0;
+            bottom:0;
+            right:0;
+            left:0;
+            opacity:0;
+            transition: all .5s;
+            pointer-events: none;
+        }
+
+        #miModal:target {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .formulario{
+            display: flex;
+            height: 200px;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        #btn-closed>a{
+            color:aliceblue;
+            text-decoration: none;
+        }
+
+        #btn-closed{
+            width: 30px;
+            height: 30px;
+            display: flex;
+            background-color: black;
+            border-radius: 50%;
+            margin-left: 270px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #btn-closed:hover a{color:red;}
+        
+    </style>
+    <link rel="stylesheet" href="../normalize.css">
+</head>
+
+<body>
+    <a href="#miModal">Abrir Modal</a>
+    <div id="miModal" class="modal" >
+        <div class="modal-contenido">
+            <div id="btn-closed">
+                <a href="#">X</a>
+            </div>
+            
+            <h2>Mi primer Modal</h2>
+            <form class="formulario" action="#" method="get">
+                <label>
+                    <input type="text" name="hola">
+                </label>
+                <label>
+                    <input type="email">
+                </label>
+            </form>
+        </div>
+    </div>
+    <div>
+        </div>
+    
+</body>
+
+</html>
